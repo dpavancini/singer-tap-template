@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: singer-tap
+  title: Singer Tap
+  description: Create a simple tap following the Singer specification
+  tags:
+    - recommended
+    - tap
+spec:
+  owner: service@example.com
+  templater: cookiecutter
+  type: service
+  path: '.'
+  schema:
+    required:
+      - component_id
+      - description
+      - project_name
+    properties:
+      component_id:
+        title: Name
+        type: string
+        description: Unique name of the component
+      description:
+        title: Description
+        type: string
+        description: Help others understand what this service does.
+      package_name:
+        title: Package Name
+        type: string
+        description: The package name to use
